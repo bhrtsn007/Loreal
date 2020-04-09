@@ -7,9 +7,9 @@ echo ""
 echo "Backup old file"
 sudo mv /usr/lib/cgi-bin /usr/lib/cgi-bin-old
 echo "Removing and changing permission of cgi-bin"
-sudo rm -r /usr/lib/cgi-bin && sudo chown -R root:root /tmp/cgi-bin
+sudo rm -r /usr/lib/cgi-bin && sudo chown -R root:root /tmp/easy_console/cgi-bin
 echo "moving cgi-bin"
-sudo mv /tmp/cgi-bin /usr/lib
+sudo mv /tmp/easy_console/cgi-bin /usr/lib
 echo "making all file executable"
 sudo find /usr/lib/cgi-bin/ -type f -iname "*.sh" -exec chmod +x {} \;
 echo ""
