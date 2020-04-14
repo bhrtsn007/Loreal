@@ -83,7 +83,7 @@ echo '<div class="vertical-menu"></div><a href="/cgi-bin/order/order_from_core_p
 
 #echo '<div class="vertical-menu"></div><a href="/cgi-bin/order/change_order_to_created.sh" class="active"><b>Change Order Status to Created</b></a>'
 
-#echo '<div class="vertical-menu"></div><a href="/cgi-bin/order/abandon_order.sh" class="active"><b>Abandon Any Order</b></a>'
+echo '<div class="vertical-menu"></div><a href="/cgi-bin/order/abandon_order.sh" class="active"><b>Abandon Any Order</b></a>'
 
 echo '</body>'
 echo '</html>'
