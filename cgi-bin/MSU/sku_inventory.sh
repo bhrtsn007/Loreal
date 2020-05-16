@@ -5,7 +5,7 @@ sku_information () {
     echo "Internal Id for SKU is:" $product_uid
     echo "<br>"
     echo '<pre>'
-    sudo /opt/butler_server/erts-9.3.3.6/bin/escript /home/gor/rpc_call.escript inventory get_by_id "[<<\"$product_uid\">>]."
+    sudo /opt/butler_server/erts-9.3.3.6/bin/escript /home/gor/rpc_call.escript inventory search_by "[[{'item_uid', 'equal', <<\"$product_uid\">>}], 'record']."
     echo '</pre>'
 }
 echo "Content-type: text/html"
@@ -28,7 +28,7 @@ echo "<br>"
 
   echo "<form method=GET action=\"${SCRIPT}\">"\
        '<table nowrap>'\
-		 '<tr><td>SKU ID</TD><TD><input type="text" name="SKU_ID" size=12></td></tr>'\
+          '<tr><td>SKU_ID</TD><TD><input type="number" name="SKU_ID" size=12></td></tr>'\
 		  '</tr></table>'
 
   echo '<br><input type="submit" value="SUBMIT">'\
@@ -50,7 +50,8 @@ echo "<br>"
         exit 0
   else
    # No looping this time, just extract the data you are looking for with sed:
-     XX=`echo "$QUERY_STRING" | sed -n 's/^.*SKU_ID=\([^&]*\).*$/\1/p' | sed "s/%20/ /g"`	
+     XX=`echo "$QUERY_STRING" | sed -r 's/([^0-9]*([0-9]*)){1}.*/\2/'`
+	
      echo "SKU_ID: " $XX
      echo '<br>'
      sku_information $XX 

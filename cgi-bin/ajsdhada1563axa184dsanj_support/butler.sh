@@ -49,7 +49,7 @@ echo '<div class="vertical-menu"></div><a href="/cgi-bin/butler/UnPause_butler.s
 
 echo  '<div class="vertical-menu"></div><a href="/cgi-bin/butler/Purge_butler.sh" class="active"><b>Purge a Butler</b></a>'
 
-echo  '<div class="vertical-menu"></div><a href="/cgi-bin/butler/loop_test_with_count.sh" class="active"><b>Loop test with count</b></a>'
+#echo  '<div class="vertical-menu"></div><a href="/cgi-bin/butler/loop_test_with_count.sh" class="active"><b>Loop test with count</b></a>'
 
 echo  '<div class="vertical-menu"></div><a href="/cgi-bin/butler/loop_test_without_count.sh" class="active"><b>Unlimited Loop Test</b></a>'
 
@@ -64,6 +64,8 @@ echo '<div class="vertical-menu"></div><a href="/cgi-bin/butler/init_butler.sh" 
 echo '<div class="vertical-menu"></div><a href="/cgi-bin/butler/get_camera.sh" class="active"><b>Get Camera Information</b></a>'
 
 echo '<div class="vertical-menu"></div><a href="/cgi-bin/butler/init_all_butler.sh" class="active"><b>Send Init to All Butler</b></a>'
+
+echo '<div class="vertical-menu"></div><a href="/cgi-bin/butler/reservation_info.sh" class="active"><b>Reservation Info</b></a>'
 
 echo '</body>'
 echo '</html>'

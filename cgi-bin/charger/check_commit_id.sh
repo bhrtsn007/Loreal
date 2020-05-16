@@ -1,7 +1,7 @@
 #!/bin/bash
 commit_id () {
     echo "Get commit id"
-    sudo /usr/lib/cgi-bin/charger/bhar.sh
+    sudo /usr/lib/cgi-bin/charger/grep_commit_from_bridge.sh
     echo "<br>"
     echo '<pre>'
     while read -r line; do

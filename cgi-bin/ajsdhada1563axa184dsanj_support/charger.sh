@@ -56,6 +56,7 @@ echo '<div class="vertical-menu"></div><a href="/cgi-bin/charger/check_commit_id
 
 echo '<div class="vertical-menu"></div><a href="/cgi-bin/charger/clear_attached_butler.sh" class="active"><b>Clear attached Butler from Charger</b></a>'
 
+
 echo '</body>'
 echo '</html>'
 
